@@ -19,11 +19,11 @@
 
                 <Label Grid.Row="0" Grid.Column="0" Text="User Name" FontSize="17" FontAttributes="Bold" TextColor="#2C363C"/>
                 <Frame Grid.Row="1" Grid.Column="0" HeightRequest="50">
-                    <Entry x:Name="userNameEntry" Text="{Binding UserName}" BackgroundColor="White" HeightRequest="48"  WidthRequest="200"  />
+                    <Entry x:Name="userNameEntry" Text="{Binding UserName}" BackgroundColor="White" HeightRequest="48"  WidthRequest="200" TextColor="Black"  />
                 </Frame>
                 <Label Grid.Row="2" Text="Password" Padding="0,20,0,0" FontAttributes="Bold" FontSize="17" TextColor="#2C363C"/>
                 <Frame Grid.Row="3" HeightRequest="50">
-                    <Entry x:Name="passwordEntry" Text="{Binding Password}" IsPassword="True" BackgroundColor="White" HeightRequest="48"  WidthRequest="200" />
+                    <Entry x:Name="passwordEntry" Text="{Binding Password}" IsPassword="True" BackgroundColor="White" HeightRequest="48"  WidthRequest="200" TextColor="Black" />
                 </Frame>
                 <Grid Grid.Row="4" Padding="0,40,0,0">
                     <VerticalStackLayout Spacing="20">
