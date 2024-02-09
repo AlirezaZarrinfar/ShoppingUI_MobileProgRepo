@@ -8,6 +8,7 @@ namespace ShoppingUI
 {
     public class ProductPageViewModel : INotifyPropertyChanged
     {
+        #region Properties
         public event PropertyChangedEventHandler PropertyChanged;
         protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
         {
@@ -64,65 +65,10 @@ namespace ShoppingUI
         public ICommand AddItemclick { get; set; }
         public ICommand DeleteItemclick { get; set; }
         public ICommand GroupFilterclick { get; set; }
-        public ProductPageViewModel(INavigation navigation)
+        #endregion
+        public ProductPageViewModel(INavigation navigation,ObservableCollection<Items> AllItems)
         {
-            AllItems = new ObservableCollection<Items>
-            {
-                new Items
-                {
-                    Id = 1,
-                    Picture="watch.png",
-                    Name = "Cool Watch",
-                    Quantity = "0",
-                    Price = "$99",
-                    Group = 2
-                },
-                new Items
-                {
-                    Id = 2,
-                    Picture="divingwatch.png",
-                    Name = "Diving Watch",
-                    Quantity = "0",
-                    Price = "$89",
-                    Group = 3
-                },
-                new Items
-                {
-                    Id = 3,
-                    Picture="dresswatch.png",
-                    Name = "Dress Watch",
-                    Quantity = "0",
-                    Price = "$85",
-                    Group = 2
-                },
-                new Items
-                {
-                    Id = 4,
-                    Picture="militarywatch.png",
-                    Name = "Military Watch",
-                    Quantity = "0",
-                    Price = "$99",
-                    Group = 3
-                },
-                new Items
-                {
-                    Id = 5,
-                    Picture="wristwatch.png",
-                    Name = "Wrist Watch",
-                    Quantity = "0",
-                    Price = "$85",
-                    Group = 4
-                },
-                new Items
-                {
-                    Id = 6,
-                    Picture="militarywatch.png",
-                    Name = "Army Watch",
-                    Quantity = "0",
-                    Price = "$99",
-                    Group = 3
-                }
-            };
+            this.AllItems = AllItems;
             Items = AllItems;
             CartItems = new ObservableCollection<Items> { };
             Itemclick = new Command<Items>(executeitemclickcommand);

@@ -6,7 +6,7 @@ public partial class ProductPage : ContentPage
     public ProductPage()
 	{
 		InitializeComponent();
-        productPageViewModel = new ProductPageViewModel(this.Navigation);
+        productPageViewModel = new ProductPageViewModel(this.Navigation,Data.Data.datas);
         BindingContext = productPageViewModel;
     }
     
