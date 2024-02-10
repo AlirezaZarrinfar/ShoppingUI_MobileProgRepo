@@ -12,9 +12,9 @@
             <Frame BorderColor="LightGray" CornerRadius="5" HasShadow="False">
                 <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" Spacing="7" VerticalOptions="Start">
                     <Button Text="All" BackgroundColor="DimGray" TextColor="White" Command="{Binding GroupFilterclick}" CommandParameter="1"/>
-                    <Button Text="موتور ها" BackgroundColor="DimGray" TextColor="White" Command="{Binding GroupFilterclick}" CommandParameter="2"/>
-                    <Button Text="Group 3" BackgroundColor="DimGray" TextColor="White" Command="{Binding GroupFilterclick}" CommandParameter="3"/>
-                    <Button Text="Group 4" BackgroundColor="DimGray" TextColor="White" Command="{Binding GroupFilterclick}" CommandParameter="4"/>
+                    <Button Text="موبایل" BackgroundColor="DimGray" TextColor="White" Command="{Binding GroupFilterclick}" CommandParameter="2"/>
+                    <Button Text="موتور" BackgroundColor="DimGray" TextColor="White" Command="{Binding GroupFilterclick}" CommandParameter="3"/>
+                    <Button Text="تلویزیون" BackgroundColor="DimGray" TextColor="White" Command="{Binding GroupFilterclick}" CommandParameter="4"/>
                 </StackLayout>
             </Frame>
 
