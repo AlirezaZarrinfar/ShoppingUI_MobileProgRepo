@@ -7,8 +7,8 @@
     <ContentPage.Content>
         <Grid RowDefinitions="Auto,*,Auto,Auto,Auto" ColumnDefinitions="*,Auto" RowSpacing="0" BackgroundColor="#2C363C">
 
-            <Grid ColumnDefinitions="*,*" RowDefinitions="Auto,Auto" Grid.ColumnSpan="2" Margin="0,10,10,8" BackgroundColor="#2C363C" HorizontalOptions="FillAndExpand">
-                    <Label Text=" Your Cart"  HorizontalTextAlignment="Start" FontSize="28" TextColor="White" FontAttributes="Bold"/>
+            <Grid ColumnDefinitions="*,*" RowDefinitions="Auto,Auto" Grid.ColumnSpan="2" Margin="0,10,10,8" BackgroundColor="#2C363C" HorizontalOptions="EndAndExpand">
+                    <Label Text="سبد خرید شما :" Margin="0,10,-50,8" HorizontalTextAlignment="End" FontSize="24" TextColor="White" FontAttributes="Bold"/>
                 <StackLayout Grid.Column="1" Grid.Row="1" Orientation="Horizontal" HorizontalOptions="End">
                     <Label  Text="{Binding Path=CartItems.Count}" CharacterSpacing="3" Padding="0,20,0,0" FontSize="15" FontAttributes="Bold" HorizontalTextAlignment="Center" TextColor="White"/>
                     <Label  Text=" تعداد :" Padding="0,20,0,0" FontSize="15" FontAttributes="Bold" HorizontalTextAlignment="Center" TextColor="White"/>

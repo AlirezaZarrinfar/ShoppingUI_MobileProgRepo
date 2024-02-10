@@ -11,7 +11,7 @@
             <!-- Header Buttons -->
             <Frame BorderColor="LightGray" CornerRadius="5" HasShadow="False">
                 <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" Spacing="7" VerticalOptions="Start">
-                    <Button Text="All" BackgroundColor="DimGray" TextColor="White" Command="{Binding GroupFilterclick}" CommandParameter="1"/>
+                    <Button Text="همه" BackgroundColor="DimGray" TextColor="White" Command="{Binding GroupFilterclick}" CommandParameter="1"/>
                     <Button Text="موبایل" BackgroundColor="DimGray" TextColor="White" Command="{Binding GroupFilterclick}" CommandParameter="2"/>
                     <Button Text="موتور" BackgroundColor="DimGray" TextColor="White" Command="{Binding GroupFilterclick}" CommandParameter="3"/>
                     <Button Text="تلویزیون" BackgroundColor="DimGray" TextColor="White" Command="{Binding GroupFilterclick}" CommandParameter="4"/>
