@@ -14,7 +14,7 @@ namespace ShoppingUI
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
-        private string _totalAmount = "0$";
+        private string _totalAmount = "0 ریال";
         public string TotalAmount
         {
             get { return _totalAmount; }
@@ -88,8 +88,8 @@ namespace ShoppingUI
 
         async void executeCartitemclickcommand(Items item)
         {
-            SelectedItem.Quantity = (Convert.ToInt32(SelectedItem.Quantity) + 1).ToString();
-            TotalAmount = "$" + (Convert.ToInt32(TotalAmount.Replace("$", "")) + Convert.ToInt32(SelectedItem.Price.Replace("$", ""))).ToString();
+            SelectedItem.Quantity = (Convert.ToInt64(SelectedItem.Quantity) + 1).ToString();
+            TotalAmount = (Convert.ToInt64(TotalAmount.Replace("ریال", "").Replace(",", "")) + Convert.ToInt64(SelectedItem.Price.Replace("ریال", "").Replace(",", ""))).ToString() + " ریال";
 
             if (CartItems?.FirstOrDefault(p => p.Id == SelectedItem.Id) == null)
             {
@@ -101,23 +101,23 @@ namespace ShoppingUI
 
         void executeAddItemcommand(Items item)
         {
-            item.Quantity = (Convert.ToInt32(item.Quantity) + 1).ToString();
-            TotalAmount = "$" + (Convert.ToInt32(TotalAmount.Replace("$", "")) + Convert.ToInt32(item.Price.Replace("$", ""))).ToString();
+            item.Quantity = (Convert.ToInt64(item.Quantity) + 1).ToString();
+            TotalAmount = (Convert.ToInt64(TotalAmount.Replace("ریال", "").Replace(",", "")) + Convert.ToInt64(item.Price.Replace("ریال", "").Replace(",", ""))).ToString() + " ریال" ;
         }
 
         void executeDeleteItemcommand(Items item)
         {
-            item.Quantity = (Convert.ToInt32(item.Quantity) - 1).ToString();
+            item.Quantity = (Convert.ToInt64(item.Quantity) - 1).ToString();
             if (item.Quantity == "0")
                 CartItems.Remove(item);
-            TotalAmount = "$" + (Convert.ToInt32(TotalAmount.Replace("$", "")) - Convert.ToInt32(item.Price.Replace("$", ""))).ToString();
+            TotalAmount = (Convert.ToInt64(TotalAmount.Replace("ریال", "").Replace(",","")) - Convert.ToInt64(item.Price.Replace("ریال", "").Replace(",", ""))).ToString() + " ریال";
         }
         async void execgroupcommand(string group)
         {
             if (group == "1")
                 Items = AllItems;
             else
-                Items = AllItems.Where(p => p.Group == Convert.ToInt32(group)).ToObservableCollection();
+                Items = AllItems.Where(p => p.Group == Convert.ToInt64(group)).ToObservableCollection();
             var page = new ProductPage();
             page.BindingContext = this;
             await navigation.PushModalAsync(page);

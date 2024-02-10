@@ -12,7 +12,7 @@
             <Frame BorderColor="LightGray" CornerRadius="5" HasShadow="False">
                 <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" Spacing="7" VerticalOptions="Start">
                     <Button Text="All" BackgroundColor="DimGray" TextColor="White" Command="{Binding GroupFilterclick}" CommandParameter="1"/>
-                    <Button Text="Group 2" BackgroundColor="DimGray" TextColor="White" Command="{Binding GroupFilterclick}" CommandParameter="2"/>
+                    <Button Text="موتور ها" BackgroundColor="DimGray" TextColor="White" Command="{Binding GroupFilterclick}" CommandParameter="2"/>
                     <Button Text="Group 3" BackgroundColor="DimGray" TextColor="White" Command="{Binding GroupFilterclick}" CommandParameter="3"/>
                     <Button Text="Group 4" BackgroundColor="DimGray" TextColor="White" Command="{Binding GroupFilterclick}" CommandParameter="4"/>
                 </StackLayout>
@@ -30,11 +30,11 @@
                                 <Image Source="{Binding Picture}"  Aspect="AspectFill" />
                             </Frame>
                             <StackLayout Grid.RowSpan="2" Grid.Column="1" VerticalOptions="Center">
-                                <Label Text="{Binding Name}"  Padding="10,0,0,10" FontSize="17" FontAttributes="Bold"/>
-                                <Label  Text="{Binding Price}" Padding="10,0,0,0" FontAttributes="Bold" FontSize="20" TextColor="#2C363C"/>
+                                <Label Text="{Binding Name}"  Padding="10,0,0,10" FontSize="17" TextColor="#2C363C" FontAttributes="Bold"/>
+                                <Label  Text="{Binding Price}" Padding="10,0,0,0" FontAttributes="Bold" FontSize="15" TextColor="#2C363C"/>
                             </StackLayout>
                             <Grid Grid.Column="3" VerticalOptions="Center">
-                                <Button  FontSize="13"  Margin="0,0,10,0" BackgroundColor="#2C363C" Text="View Details" Command="{Binding Source={x:Reference listView},Path=BindingContext.Itemclick}" CommandParameter="{Binding}" TextColor="White" HorizontalOptions="End" HeightRequest="40" WidthRequest="70"/>
+                                <Button  FontSize="13"  Margin="0,0,10,0" BackgroundColor="#2C363C" Text="جزئیات" Command="{Binding Source={x:Reference listView},Path=BindingContext.Itemclick}" CommandParameter="{Binding}" TextColor="White" HorizontalOptions="End" HeightRequest="40" WidthRequest="70"/>
                             </Grid>
                             <Grid Grid.Row="1" Grid.ColumnSpan="3">
                                 <Label Background="LightGray" Margin="2" HeightRequest="1"/>

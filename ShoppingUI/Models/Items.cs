@@ -23,6 +23,7 @@ namespace ShoppingUI
         public string Picture  { get; set; }
         public string Name    { get; set; }
         public int Group   { get; set; }
+        public string Desc { get; set; }
 
         public event PropertyChangedEventHandler PropertyChanged;
 
